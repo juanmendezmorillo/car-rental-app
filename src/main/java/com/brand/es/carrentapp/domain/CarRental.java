@@ -9,10 +9,19 @@ import java.util.Optional;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Exposes the necessary methods for managing car reservations.
+ */
 @Slf4j
 @NoArgsConstructor
 public class CarRental {
 
+  /**
+   * Calculate the price of a reservation according to the type of car and rental days.
+   *
+   * @param reservation, reservation data.
+   * @return reservation data with the calculated price.
+   */
   public Optional<Reservation> calculatePriceForReservation(Reservation reservation) {
     return Optional.of(calculateTotalPrice(reservation));
   }
@@ -67,6 +76,14 @@ public class CarRental {
 
   }
 
+  /**
+   * Return the car from a reservation and calculate an extra price according to the delivery date,
+   * change the reservation status.
+   *
+   * @param reservation, reservation data.
+   * @param typeCars,    types of cars to calculate extra costs.
+   * @return reservation data with the possible extra cost calculated.
+   */
   public Optional<Reservation> returnCarAndCalculateSurcharges(Reservation reservation,
       List<TypeCar> typeCars) {
 

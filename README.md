@@ -61,18 +61,23 @@ open http://localhost:8080/swagger-ui.html
 # Development Steps
 
 * I have used a 'hex architecture' of 'ports' (interfaces) and 'adapters' (implementations)
-  with the motivation of separating the application into different layers, each one with its own responsibility
+  with the motivation of separating the application into different layers, each one with its own
+  responsibility
   and allowing you to evolve in an isolated way.
 
-  Initially I have focused on the 'domain' layer where I have created the necessary classes and methods to
-  provide a solution to the functional requirements (business) of the 'Car rental system' program. 
-  Next I have created the output 'ports' and 'adapters' (database) for data persistence. 
-  Finally I created the input 'ports' and 'adapters' (rest api) in order to expose the available system operations.
+  Initially I have focused on the 'domain' layer where I have created the necessary classes and
+  methods to
+  provide a solution to the functional requirements (business) of the 'Car rental system' program.
+  Next I have created the output 'ports' and 'adapters' (database) for data persistence.
+  Finally I created the input 'ports' and 'adapters' (rest api) in order to expose the available
+  system operations.
 
-  Some important aspects have remained to be carried out, such as user authentication and authorization,
+  Some important aspects have remained to be carried out, such as user authentication and
+  authorization,
   overlaps in reservation dates for the same car, increased test coverage, crud users, crud car.
 
-* The creation of 'tables' and loading of 'data' is done in the file 'V1_create_tables_and_insert_data.sql' 
+* The creation of 'tables' and loading of 'data' is done in the file '
+  V1_create_tables_and_insert_data.sql'
   at startup the application [Start](#start).
 
 * The version of 'spring-boot' used is '2.7.8' with java '1.8', the database has been used
