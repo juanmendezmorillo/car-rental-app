@@ -30,7 +30,6 @@ public interface ReservationWebPort {
   @Operation(summary = "Create reservations and obtain prices")
   @ApiResponses(value = {
       @ApiResponse(responseCode = "200", description = "Reservations have been created successfully"),
-      @ApiResponse(responseCode = "404", description = "Reservation fields not Found!"),
       @ApiResponse(responseCode = "500", description = "Server Error!"),})
   @PostMapping
   ResponseEntity<List<ReservationDTO>> createReservationsAndCalculatePrices(
